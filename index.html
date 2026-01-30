@@ -19,7 +19,7 @@
             color: transparent;
         }
         .hero-glow {
-            filter: drop-shadow(0 0 40px rgba(56, 189, 248, 0.35));
+            filter: drop-shadow(0 0 50px rgba(56, 189, 248, 0.4));
         }
         .card-blur {
             backdrop-filter: blur(10px);
@@ -29,19 +29,16 @@
 </head>
 <body class="text-slate-200">
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="flex items-center gap-3">
-            <img src="img/logo.png" alt="Moonforge Logo" class="w-16 h-auto">
-        </div>
-        <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+    <nav class="p-6 flex justify-end items-center max-w-7xl mx-auto">
+        <div class="flex gap-8 text-sm font-medium text-slate-400">
             <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
             <a href="mailto:contact@moonforgearcade.com" class="hover:text-sky-400 transition-colors">Contact</a>
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center max-w-5xl mx-auto">
+    <header class="py-16 px-6 text-center max-w-5xl mx-auto">
         <div class="mb-12 flex justify-center">
-            <img src="img/logo.png" alt="Moonforge Arcade Logo" class="w-full max-w-md md:max-w-lg hero-glow transition-all duration-500 hover:scale-105">
+            <img src="logo.png" alt="Moonforge Arcade Logo" class="w-full max-w-xl md:max-w-2xl hero-glow transition-all duration-500 hover:scale-105">
         </div>
         
         <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
@@ -55,7 +52,7 @@
 
     <section id="projects" class="py-24 bg-slate-900/40 border-y border-slate-800/50">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-white text-center">Active Forges</h2>
+            <h2 class="text-4xl font-bold mb-16 text-white text-center text-white">Active Forges</h2>
             
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="p-10 rounded-3xl border border-slate-700/50 card-blur hover:border-sky-500/50 transition-all duration-300 group bg-gradient-to-b from-slate-800/20 to-transparent">
@@ -87,7 +84,7 @@
     </section>
 
     <footer class="py-16 text-center border-t border-slate-800/50">
-        <img src="img/logo.png" alt="Moonforge Logo" class="w-12 h-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity">
+        <img src="logo.png" alt="Moonforge Logo" class="w-24 h-auto mx-auto mb-6 opacity-60 hover:opacity-100 transition-opacity">
         <p class="text-slate-500 text-sm mb-2">&copy; 2026 Moonforge Arcade LLC. All rights reserved.</p>
         <div class="text-slate-700 text-[10px] uppercase tracking-[0.4em] font-bold">Precision • Creativity • Code</div>
     </footer>
