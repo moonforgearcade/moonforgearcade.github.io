@@ -33,7 +33,7 @@
     <nav class="p-6 flex justify-end items-center max-w-7xl mx-auto">
         <div class="flex gap-8 text-sm font-medium text-slate-400">
             <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
-            <a href="mailto:info@moonforgearcade.com" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="support.html" class="hover:text-sky-400 transition-colors">Contact</a>
         </div>
     </nav>
 
@@ -55,7 +55,7 @@
 
     <section id="projects" class="py-24 bg-slate-900/40 border-y border-slate-800/50">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-white text-center text-white">Active Forges</h2>
+            <h2 class="text-4xl font-bold mb-16 text-white text-center">Active Forges</h2>
             
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="p-10 rounded-3xl border border-slate-700/50 card-blur hover:border-sky-500/50 transition-all duration-300 group bg-gradient-to-b from-slate-800/20 to-transparent">
@@ -72,11 +72,23 @@
                 </div>
 
                 <div class="p-10 rounded-3xl border border-slate-700/50 card-blur hover:border-indigo-500/50 transition-all duration-300 group bg-gradient-to-b from-slate-800/20 to-transparent">
-                    <div class="text-indigo-400 font-mono text-xs tracking-widest uppercase mb-4">Infrastructure • Open Source</div>
+                    
+                    <div class="text-indigo-400 font-mono text-xs tracking-widest uppercase mb-3">
+                        Infrastructure • Open Source
+                    </div>
+
+                    <div class="flex gap-2 mb-5">
+                        <img alt="GitHub stars" src="https://img.shields.io/github/stars/pineappledr/vigil?style=flat-square&color=indigo&labelColor=334155" class="h-5">
+                        <img alt="GitHub release" src="https://img.shields.io/github/v/release/pineappledr/vigil?style=flat-square&color=38bdf8&labelColor=334155" class="h-5">
+                        <img alt="License" src="https://img.shields.io/github/license/pineappledr/vigil?style=flat-square&color=emerald&labelColor=334155" class="h-5">
+                    </div>
+                    
                     <h3 class="text-3xl font-bold mb-4 text-white group-hover:text-indigo-400 transition-colors">Vigil</h3>
+                    
                     <p class="text-slate-300 leading-relaxed mb-8">
                         Lightweight, robust server monitoring tool written in Go. Designed for high-availability systems with a focus on simplicity and speed.
                     </p>
+
                     <a href="https://github.com/pineappledr/vigil" target="_blank" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-indigo-500/10 text-sm font-semibold text-indigo-300 hover:bg-indigo-500/20 hover:text-indigo-200 transition-all border border-indigo-500/20">
                         View on GitHub 
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
@@ -87,13 +99,35 @@
     </section>
 
     <footer class="py-20 text-center border-t border-slate-800/50">
-        <img src="img/logo.png" alt="Moonforge Logo" class="w-full max-w-48 h-auto mx-auto opacity-30 hover:opacity-100 transition-opacity duration-500">
+        <div class="flex justify-center mb-8">
+            <img src="img/logo.png" alt="Moonforge Logo" class="w-full max-w-48 h-auto mx-auto opacity-30 hover:opacity-100 transition-opacity duration-500">
+        </div>
         
-        <div class="mt-5">
-            <p class="text-slate-500 text-base mb-2">&copy; 2026 Moonforge Arcade LLC. All rights reserved.</p>
-            <div class="text-slate-700 text-[12px] uppercase tracking-[0.4em] font-bold">
-                Precision • Creativity • Code
+        <div class="space-y-6">
+            <p class="text-slate-500 text-sm tracking-wide">
+                &copy; 2026 Moonforge Arcade LLC. All rights reserved.
+            </p>
+
+            <div class="mt-5">
+                <div class="text-slate-700 text-[11px] uppercase tracking-[0.6em] font-bold">
+                    Precision • Creativity • Code
+                </div>
             </div>
+            
+            <div class="text-slate-600 text-[13px] leading-relaxed">
+                <p>4601 E Douglas Ave. Ste 150</p>
+                <p>Wichita, KS 67218</p>
+            </div>
+
+            <div class="flex justify-center items-center gap-6 text-sm">
+                <a href="privacy.html" class="text-sky-500/70 hover:text-sky-400 transition-colors">Privacy Policy</a>
+                <span class="text-slate-800 text-xs">•</span>
+                <a href="terms.html" class="text-sky-500/70 hover:text-sky-400 transition-colors">Terms of Service</a>
+                <span class="text-slate-800 text-xs">•</span>
+                <a href="support.html" class="text-sky-500/70 hover:text-sky-400 transition-colors">Contact Support</a>
+            </div>
+
+
         </div>
     </footer>
 
