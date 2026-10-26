@@ -39,6 +39,7 @@
             response_type: "code",
             redirect_uri: "https://moonforgearcade.com/tiktok/callback.html",
             state: state,
+            disable_auto_auth: "1",   // always show the consent screen (also after a first authorization)
         });
         document.getElementById("connect").href = "https://www.tiktok.com/v2/auth/authorize/?" + q.toString();
     </script>
