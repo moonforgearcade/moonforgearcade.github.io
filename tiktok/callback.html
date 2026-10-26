@@ -37,6 +37,13 @@
             title.textContent = "Connection not completed";
             msg.textContent = "TikTok returned: " + q.get("error") + (q.get("error_description") ? " — " + q.get("error_description") : "");
         } else if (q.get("code")) {
+            const esperado = sessionStorage.getItem("tiktok_state");
+            if (esperado && esperado !== q.get("state")) {
+                title.textContent = "Connection not completed";
+                msg.textContent = "The security check (state) did not match. Start again from the Connect page.";
+                history.replaceState(null, "", location.pathname);
+                throw new Error("state mismatch");
+            }
             title.textContent = "Account connected";
             msg.textContent = "Copy this one-time code back to the La Señal publisher. It expires in a few minutes.";
             code.textContent = "code=" + q.get("code") + "\nstate=" + (q.get("state") || "");
