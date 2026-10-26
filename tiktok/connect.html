@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Connect TikTok | La Señal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="../img/lasenal.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #020617; color: #cbd5e1; }
+        a { color: #38bdf8; }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4 md:px-8">
+    <!--
+      Where La Señal's own TikTok account (@lasenal.news) is connected to the
+      La Señal Publisher app (Login Kit). Scopes: user.info.basic (confirm which
+      account receives uploads) and video.upload (send our approved videos to
+      the account's TikTok inbox as drafts). The client key is a public
+      identifier; the client secret never touches this site.
+    -->
+    <div class="max-w-xl mx-auto bg-slate-900/50 p-8 rounded-3xl border border-slate-800 text-center">
+        <img src="../img/lasenal.png" alt="La Señal logo" class="w-20 h-20 rounded-full mx-auto mb-6">
+        <h1 class="text-2xl font-bold text-white mb-4">Connect La Señal to TikTok</h1>
+        <p class="leading-relaxed mb-2">This connects La Señal's own TikTok account so our server can send each day's approved news video to its <strong>TikTok inbox as a draft</strong>.</p>
+        <p class="leading-relaxed mb-8 text-slate-400 text-sm">We ask for two permissions: your basic profile (to confirm the account) and uploading videos as drafts. You review and publish every video yourself in the TikTok app.</p>
+        <a id="connect" href="#" class="inline-block px-8 py-4 rounded-2xl bg-white text-black font-bold hover:no-underline">Continue with TikTok</a>
+        <p class="mt-8 text-sm"><a href="../lasenal.html">La Señal</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms</a></p>
+    </div>
+    <script>
+        const CLIENT_KEY = "sbaw5oronsfb15aqks";   // sandbox; switch to the production key after app review
+        const state = crypto.getRandomValues(new Uint32Array(4)).join("");
+        sessionStorage.setItem("tiktok_state", state);
+        const q = new URLSearchParams({
+            client_key: CLIENT_KEY,
+            scope: "user.info.basic,video.upload",
+            response_type: "code",
+            redirect_uri: "https://moonforgearcade.com/tiktok/callback.html",
+            state: state,
+        });
+        document.getElementById("connect").href = "https://www.tiktok.com/v2/auth/authorize/?" + q.toString();
+    </script>
+</body>
+</html>
